@@ -1,0 +1,123 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: hsl(30, 38%, 92%);
+    font-size: 14px;
+}
+
+.parent{
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    max-width: 800px;
+    margin: 80px auto;
+    border-radius: 15px;
+    
+}
+.image{
+    width: 50%;
+}
+
+.image img{
+    width: 100%;
+    height: 99.5%;
+    border-radius: 15px 0px 0px 15px;
+}
+
+.image img:last-of-type{
+    display: none;
+}
+.Content{
+    width: 50%;
+    max-height: 600px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 0px 15px 15px 0px;
+}
+.Content p:first-child{
+    font-family: 'Montserrat', serif;
+    font-weight: 500;
+    color: hsl(228, 12%, 48%);
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    margin: 20px;
+}
+h1{
+    font-family: "Fraunces", serif ;
+    font-weight: 700;
+    margin: 0px 20px 20px;
+    font-size: 44px;    
+}
+.Content p:nth-of-type(2){
+    margin: 10px 20px 30px ;
+    font-family: 'Montserrat',serif;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.8;
+    word-spacing: 3px;
+    color: hsl(228, 12%, 48%);
+}
+.Content p:last-of-type{
+    color: hsl(158, 36%, 37%);
+    margin: 0 20px;
+    font-family: "Fraunces", serif ;
+    font-weight: 700;
+    display: inline;
+    font-size: 32px;
+}
+span{
+    text-decoration: line-through;
+    color: hsl(228, 12%, 48%);
+}
+button{
+    display: block;
+    text-align: center;
+    margin: 25px auto;
+    width: 100% ;
+    max-width: 320px;
+    height: 60px;
+    border-radius: 15px;
+    border: none;
+    background-color: hsl(158, 36%, 37%);
+    color: white;
+    font-family: 'Montserrat',serif;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 1s linear;
+}
+button img{
+    margin: 0 15px;
+    width: 20px;
+    text-align: center;
+}
+ button:hover{
+    background-color: hsl(158, 42%, 18%);
+    
+ }
+
+@media (max-width:768px){
+    .parent{
+        flex-direction: column;
+        width: 90%;
+        margin: 20px;
+    }
+    .image,.Content{
+        width: 100%;
+        border-radius: 0;
+    }
+    .image img:first-child{
+    display: none;
+    }
+    .image img:last-of-type{
+        display: block;
+        border-radius: 15px 15px 0 0;
+        height: auto;
+    }
+    .Content{
+    border-radius: 0 0 15px 15px;
+    }
+
+}
